@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../css/flexboxgrid.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div></div>
+    <div class="row center-xs titulo">
+        <h1 class="logo">History Learn</h1>
+    </div>
+    <div class="row center-xs">
+        <form action="../index.html" method="GET" id="registro">
+            <div class="form-group">
+                <label for="regNombre">Nombres</label>
+                <input type="text" required class="form-control" name="regNombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="form-group">
+                <label for="regApellido">Apellidos</label>
+                <input type="text" required class="form-control" name="regApellido" placeholder="Ingrese su apellido">
+            </div>
+            <div class="form-group">
+                <label for="regEmail">Email</label>
+                <input type="email" required class="form-control" name="regEmail" placeholder="Correo@Example.com">
+            </div>
+            <div class="form-group">
+                <label for="regNumero">Numero de Teléfono</label>
+                <input type="text" class="form-control" name="regNumero" placeholder="Ingrese su número">
+            </div>
+            <div class="form-group">
+                <label for="newPass">Contraseña</label>
+                <input type="password" required class="form-control" name="newPass" placeholder="Escriba su contraseña">
+            </div>
+            <button type="submit" id="btnRegistro" class="btn btn-primary">Registrarse</button>
+        </form>
+    </div>
+    <div class="row center-xs">
+        <a href="../index.html">
+            <button type="submit" class="btn btn-danger btncancelar">Cancelar</button>
+        </a>
+    </div>
+
+    <!--JS SCRIPT-->
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/jquery.validate.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
