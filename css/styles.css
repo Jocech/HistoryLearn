@@ -118,3 +118,10 @@ body{
     height: 40%;
     width: 50%;
 }
+.nivel{
+    font-family: "Montserrat",sans-serif;
+}
+.nivel h1{
+    font-size: 25px;
+    font-weight: bold;
+}
