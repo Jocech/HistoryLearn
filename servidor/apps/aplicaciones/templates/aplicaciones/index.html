@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>History Learn</title>
-    <link rel="stylesheet" href="css/flexboxgrid.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'aplicaciones/css/flexboxgrid.css' %}">
+    <link rel="stylesheet" href="{% static 'aplicaciones/css/bootstrap.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{% static 'aplicaciones/css/styles.css' %}">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
@@ -22,17 +23,17 @@
 
     <div class="row center-xs login">
         <div class="middle-xs">
-            <form action="pages/Inicio.html" method="GET" id="login">
+            <form action="pages/Inicio.html" method="POST" id="login">
                 <div class="form-group ">
                     <label for="email">Dirección de Email</label>
-                    <input type="email" name="email" required class="form-control"  aria-describedby="emailHelp" placeholder="Correo@Example.com">
+                    <input type="email" name="username" required class="form-control"  aria-describedby="emailHelp" placeholder="Correo@Example.com">
                 </div>
                 <div class="form-group">
                     <label for="contraseña">Contraseña</label>
-                    <input type="password" name="contraseña" required class="form-control" placeholder="Ingrese su Contraseña">
+                    <input type="password" name="password" required class="form-control" placeholder="Ingrese su Contraseña">
                 </div>
                 <div class="form-group form-check">
-                    <a id="recuperacion" href="pages/recuperacion.html">Recuperar contraseña</a>
+                    <a id="recuperacion" href="{% url 'Recuperacion' %}">Recuperar contraseña</a>
                 </div>
                 <button type="submit" class="btn btn-success botones" id="boton">Iniciar Sesión</button>
                 
@@ -45,10 +46,10 @@
     </div>
 
     <!--JS SCRIPT-->
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/jquery.validate.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/app.js"></script>
+    <script src="{% static 'aplicaciones/js/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'aplicaciones/js/jquery.validate.js' %}"></script>
+    <script src="{% static 'aplicaciones/js/bootstrap.js' %}"></script>
+    <script src="{% static 'aplicaciones/js/app.js' %}"></script>
 </body>
 
 </html>
