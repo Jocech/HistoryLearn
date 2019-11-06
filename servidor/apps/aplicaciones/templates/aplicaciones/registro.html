@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro</title>
-    <link rel="stylesheet" href="../css/flexboxgrid.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'aplicaciones/css/flexboxgrid.css' %}">
+    <link rel="stylesheet" href="{% static 'aplicaciones/css/bootstrap.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="{% static 'aplicaciones/css/styles.css' %}">
 </head>
 
 <body>
@@ -19,7 +20,9 @@
         <h1 class="logo">History Learn</h1>
     </div>
     <div class="row center-xs">
-        <form action="../index.html" method="GET" id="registro">
+        <form action="" method="POST" id="Registro">
+            {{ form.as_p }}
+            {% csrf_token %}
             <div class="form-group">
                 <label for="regNombre">Nombres</label>
                 <input type="text" required class="form-control" name="regNombre" placeholder="Ingrese su nombre">
@@ -44,16 +47,16 @@
         </form>
     </div>
     <div class="row center-xs">
-        <a href="../index.html">
+        <a href="{% url 'Index' %}">
             <button type="submit" class="btn btn-danger btncancelar">Cancelar</button>
         </a>
     </div>
 
     <!--JS SCRIPT-->
-    <script src="../js/jquery-3.4.1.js"></script>
-    <script src="../js/jquery.validate.js"></script>
-    <script src="../js/bootstrap.js"></script>
-    <script src="../js/app.js"></script>
+    <script src="{% static 'aplicaciones/js/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'aplicaciones/js/jquery.validate.js' %}"></script>
+    <script src="{% static 'aplicaciones/js/bootstrap.js' %}"></script>
+    <script src="{% static 'aplicaciones/js/app.js' %}"></script>
 </body>
 
 </html>

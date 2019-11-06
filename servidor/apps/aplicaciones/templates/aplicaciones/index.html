@@ -23,7 +23,8 @@
 
     <div class="row center-xs login">
         <div class="middle-xs">
-            <form action="pages/Inicio.html" method="POST" id="login">
+            <form action="" method="POST" id="login">
+                {% csrf_token %}
                 <div class="form-group ">
                     <label for="email">Dirección de Email</label>
                     <input type="email" name="username" required class="form-control"  aria-describedby="emailHelp" placeholder="Correo@Example.com">
@@ -38,7 +39,7 @@
                 <button type="submit" class="btn btn-success botones" id="boton">Iniciar Sesión</button>
                 
             </form>
-            <a href="pages/registro.html">
+            <a href="{% url 'Registro' %}">
                 <button type="submit" class="btn btn-warning registrarse botones">Registrarse</button>
             </a>
         </div>
