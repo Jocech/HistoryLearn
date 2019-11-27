@@ -30,13 +30,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="../img/jrdn.jpg" class="d-block w-100 slider-altura" alt="...">
+          <img src="{% static 'aplicaciones/img/jrdn.jpg' %}" class="d-block w-100 slider-altura" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="../img/jrdn2.jpg" class="d-block w-100 slider-altura" alt="...">
+          <img src="{% static 'aplicaciones/img/jrdn2.jpg' %}" class="d-block w-100 slider-altura" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="../img/jordan2.jpg" class="d-block w-100 slider-altura" alt="...">
+          <img src="{% static 'aplicaciones/img/jordan2.jpg' %}" class="d-block w-100 slider-altura" alt="...">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -69,7 +69,7 @@
     </div>
   </div>
   <div class="row center-xs">
-    <a href="../pages/Inicio.html">
+    <a href="{% url 'Inicio'%}">
       <button type="submit" class="btn btn-success btnRegresar">Regresar</button>
     </a>
   </div>
